@@ -26,12 +26,12 @@ def main():
             })
 
             # Make prediction
-            prediction = model.predict(input_data)
+            result = model.predict(input_data)
             
-            result =  "Default" if prediction[0] == 1 else "No Default"
+            default =  "Default" if result["prediction"] == 1 else "No Default"
 
-            st.write(f"Prediction: {result}")
-            st.write(f"Probability of Default: {prediction[1]:.2f}")
+            st.write(f"Prediction: {default}")
+            st.write(f"Probability of Default: {result["probability"]:.2f}")
     
 
 
