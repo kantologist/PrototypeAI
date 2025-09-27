@@ -25,10 +25,6 @@ async def load_model():
         # model = pickle.load(open('model.pk', 'rb'))
         # model = joblib.load(open('model.pkl', 'rb'))
         model = joblib.load('model.pkl')
-        try:
-            est = joblib.load('model.pkl')
-        except InconsistentVersionWarning as w:
-            print(w.original_sklearn_version)
         logger.info("Model loaded successfully!")
     except Exception as e:
         logger.error(f"Error loading model: {e}")
