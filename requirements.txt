@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+fastapi
+uvicorn
+pydantic
+joblib
+gunicorn==19.9.0
+uvloop
+httptools
