@@ -28,10 +28,9 @@ def main():
             # Make prediction
             result = model.predict(input_data)
             
-            default =  "Default" if result["prediction"] == 1 else "No Default"
+            default =  "Default" if result[0] == 1 else "No Default"
 
             st.write(f"Prediction: {default}")
-            st.write(f"Probability of Default: {result["probability"]:.2f}")
     
 
 
